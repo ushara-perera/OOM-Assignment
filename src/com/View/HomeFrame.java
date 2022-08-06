@@ -30,6 +30,7 @@ public class HomeFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         Button2 = new javax.swing.JButton();
         Button3 = new javax.swing.JButton();
+        Button5 = new javax.swing.JButton();
         Button4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         ButtonClose = new javax.swing.JButton();
@@ -73,7 +74,6 @@ public class HomeFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
@@ -87,21 +87,21 @@ public class HomeFrame extends javax.swing.JFrame {
         jLabel1.setText("!AHOY CARATS!");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 310, 100));
 
-        Button1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Button1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Button1.setText("Subscribe");
         Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 350, 120, 50));
+        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 120, 50));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("<html> <body> <p>New to being a carat? <br> Join our community NOW!! </p> </body> </html>");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 220, 60));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 220, 60));
 
         Button2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Button2.setText("<html>\n<body>\n<p> Log out</p>\n</body>\n</html>");
@@ -110,16 +110,25 @@ public class HomeFrame extends javax.swing.JFrame {
                 Button2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, 150, 40));
+        jPanel1.add(Button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 150, 40));
 
         Button3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        Button3.setText("<html>\n<body>\n<p> Create a NEW Channel </p>\n</body>\n</html>");
+        Button3.setText("<html>\n<body>\n<p> LOGIN </p>\n</body>\n</html>");
         Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 230, 40));
+        jPanel1.add(Button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 120, 40));
+
+        Button5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        Button5.setText("<html>\n<body>\n<p> Create a NEW Channel </p>\n</body>\n</html>");
+        Button5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Button5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 230, 40));
 
         Button4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Button4.setText("<html>\n<body>\n<p> My memo</p>\n</body>\n</html>");
@@ -128,7 +137,7 @@ public class HomeFrame extends javax.swing.JFrame {
                 Button4ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 130, 40));
+        jPanel1.add(Button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 130, 40));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/n1.jpg"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 120, -1, -1));
@@ -181,14 +190,20 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button3ActionPerformed
         // TODO add your handling code here:
-        ChannelFrame2 ch1 = new ChannelFrame2();
-        ch1.setVisible(true);
+        LoginFrame1 lg1 = new LoginFrame1();
+        lg1.setVisible(true);
     }//GEN-LAST:event_Button3ActionPerformed
 
     private void ButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCloseActionPerformed
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_ButtonCloseActionPerformed
+
+    private void Button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button5ActionPerformed
+        // TODO add your handling code here:
+        ChannelFrame2 ch1 = new ChannelFrame2();
+        ch1.setVisible(true);
+    }//GEN-LAST:event_Button5ActionPerformed
 /**/
     /**
      * @param args the command line arguments
@@ -228,6 +243,7 @@ public class HomeFrame extends javax.swing.JFrame {
     private javax.swing.JButton Button2;
     private javax.swing.JButton Button3;
     private javax.swing.JButton Button4;
+    private javax.swing.JButton Button5;
     private javax.swing.JButton ButtonClose;
     public javax.swing.JButton jButton1;
     private javax.swing.JFrame jFrame1;
