@@ -39,13 +39,7 @@ public class ChannelControllerTest {
         System.out.println("End");
     }
 
-    @Test
-    public void testSomeMethod() {
-        int subscribe = controller.subscribe(1, 2);
-        assertEquals(3, subscribe);
-        
-    }
-    
+       
     @Test
     public void Tword(){
                
