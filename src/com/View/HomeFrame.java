@@ -73,6 +73,7 @@ public class HomeFrame extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Home page");
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -87,14 +88,14 @@ public class HomeFrame extends javax.swing.JFrame {
         jLabel1.setText("!AHOY CARATS!");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 310, 100));
 
-        Button1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Button1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
         Button1.setText("Subscribe");
         Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 120, 50));
+        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, 150, 50));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
