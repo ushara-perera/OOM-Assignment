@@ -35,7 +35,7 @@ public class MyMemo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Notepad");
         setPreferredSize(new java.awt.Dimension(615, 410));
 

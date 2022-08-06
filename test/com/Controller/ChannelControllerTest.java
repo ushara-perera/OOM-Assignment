@@ -54,11 +54,11 @@ public class ChannelControllerTest {
         controller.subscribe(5, 6);
     }
     
-    //@Test
-    //public void testPasswordCharacterLength(){
+    @Test
+    public void testPasswordCharacterLength(){
         
-        //int passwordLength = controller.passwordLength(7, 8);
-       // assertEquals(8, passwordLength);
-    //}
+        int passwordLength = controller.passwordLength(7, 8);
+        assertEquals(8, passwordLength);
+    }
     
 }

@@ -46,7 +46,7 @@ public class ChannelFrame2 extends javax.swing.JFrame {
             }
         });
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create your channel");
         setBackground(new java.awt.Color(255, 255, 255));
 

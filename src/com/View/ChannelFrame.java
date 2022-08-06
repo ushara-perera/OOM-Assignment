@@ -46,7 +46,7 @@ public class ChannelFrame extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/img2.png"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(699, 484));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("My Channel");
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(590, 450));
