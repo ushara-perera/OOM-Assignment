@@ -47,7 +47,6 @@ public class LoginFrame1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(700, 450));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 450));
@@ -97,7 +96,7 @@ public class LoginFrame1 extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 100, 60));
 
-        jPasswordField1.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters");
+        jPasswordField1.setToolTipText("Enter your password here. The password cannot exceed 8 characters");
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/My project.jpg"))); // NOI18N

@@ -49,7 +49,6 @@ public class UserFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Signup");
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
@@ -111,7 +110,7 @@ public class UserFrame extends javax.swing.JFrame {
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 210, 40));
 
         jPasswordField1.setText("enter your password here");
-        jPasswordField1.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters");
+        jPasswordField1.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters and cannot exceed 8 characters.");
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/My project.jpg"))); // NOI18N

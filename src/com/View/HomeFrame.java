@@ -7,6 +7,7 @@ package com.View;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.*;
+import javax.swing.JOptionPane;
 
 public class HomeFrame extends javax.swing.JFrame {
 
@@ -187,6 +188,10 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void Button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button2ActionPerformed
         // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Do you want to Log out?", "Logout",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if(response==JOptionPane.YES_OPTION){
+            dispose();
+        }
     }//GEN-LAST:event_Button2ActionPerformed
 
     private void Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button3ActionPerformed

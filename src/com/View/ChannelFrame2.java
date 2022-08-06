@@ -4,6 +4,8 @@
  */
 package com.View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -135,6 +137,7 @@ public class ChannelFrame2 extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Channel created");
         ChannelFrame ch2 = new ChannelFrame();
         ch2.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed

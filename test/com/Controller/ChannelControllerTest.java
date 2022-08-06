@@ -47,10 +47,18 @@ public class ChannelControllerTest {
     }
     
     @Test
-    public void test2(){
+    public void Tword(){
+               
         exceptionRule.expect(RuntimeException.class);
         exceptionRule.expectMessage("Error");
         controller.subscribe(5, 6);
     }
+    
+    //@Test
+    //public void testPasswordCharacterLength(){
+        
+        //int passwordLength = controller.passwordLength(7, 8);
+       // assertEquals(8, passwordLength);
+    //}
     
 }
