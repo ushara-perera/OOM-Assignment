@@ -73,9 +73,11 @@ public class HomeFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(900, 650));
+        jPanel1.setMinimumSize(new java.awt.Dimension(800, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,7 +85,7 @@ public class HomeFrame extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("!AHOY CARATS!");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 310, 100));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 310, 100));
 
         Button1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Button1.setText("Subscribe");
@@ -92,14 +94,14 @@ public class HomeFrame extends javax.swing.JFrame {
                 Button1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 330, 120, 50));
+        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 120, 50));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("<html> <body> <p>New to being a carat? <br> Join our community NOW!! </p> </body> </html>");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 260, 220, 60));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, 60));
 
         Button2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Button2.setText("<html>\n<body>\n<p> Log out</p>\n</body>\n</html>");
@@ -108,7 +110,7 @@ public class HomeFrame extends javax.swing.JFrame {
                 Button2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 580, 150, 40));
+        jPanel1.add(Button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, 150, 40));
 
         Button3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Button3.setText("<html>\n<body>\n<p> Create a NEW Channel </p>\n</body>\n</html>");
@@ -117,7 +119,7 @@ public class HomeFrame extends javax.swing.JFrame {
                 Button3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 230, 40));
+        jPanel1.add(Button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 230, 40));
 
         Button4.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Button4.setText("<html>\n<body>\n<p> My memo</p>\n</body>\n</html>");
@@ -137,12 +139,10 @@ public class HomeFrame extends javax.swing.JFrame {
                 ButtonCloseActionPerformed(evt);
             }
         });
-        jPanel1.add(ButtonClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, 70, 70));
+        jPanel1.add(ButtonClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 20, 70, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/h1.png"))); // NOI18N
-        jLabel2.setOpaque(true);
-        jLabel2.setPreferredSize(new java.awt.Dimension(900, 650));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 650));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home2.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 798, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,6 +165,8 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void Button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button4ActionPerformed
         // TODO add your handling code here:
+        MyMemo mm1 = new MyMemo();
+        mm1.setVisible(true);
     }//GEN-LAST:event_Button4ActionPerformed
 
     private void Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button1ActionPerformed
