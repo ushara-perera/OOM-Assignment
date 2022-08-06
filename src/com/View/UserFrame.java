@@ -102,6 +102,7 @@ public class UserFrame extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 30));
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField3.setToolTipText("Please enter a valid email address.");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -110,6 +111,7 @@ public class UserFrame extends javax.swing.JFrame {
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 210, 40));
 
         jPasswordField1.setText("enter your password here");
+        jPasswordField1.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters");
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/My project.jpg"))); // NOI18N

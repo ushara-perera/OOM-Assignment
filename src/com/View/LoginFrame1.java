@@ -67,7 +67,7 @@ public class LoginFrame1 extends javax.swing.JFrame {
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField1.setText("Enter your preferred user name");
-        jTextField1.setToolTipText("");
+        jTextField1.setToolTipText("Enter your preferred user name");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -97,7 +97,7 @@ public class LoginFrame1 extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 100, 60));
 
-        jPasswordField1.setText("enter your password here");
+        jPasswordField1.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters");
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/My project.jpg"))); // NOI18N

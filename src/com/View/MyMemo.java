@@ -43,7 +43,8 @@ public class MyMemo extends javax.swing.JFrame {
         BackgroundPanel.setPreferredSize(new java.awt.Dimension(612, 344));
         BackgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setText("Type your thouhts here....");
+        jTextField1.setText("Type your thoughts here....");
+        jTextField1.setToolTipText("");
         jTextField1.setOpaque(true);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
