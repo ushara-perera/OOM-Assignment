@@ -94,14 +94,14 @@ public class HomeFrame extends javax.swing.JFrame {
                 Button1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 120, 50));
+        jPanel1.add(Button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 350, 120, 50));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("<html> <body> <p>New to being a carat? <br> Join our community NOW!! </p> </body> </html>");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, 60));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 220, 60));
 
         Button2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         Button2.setText("<html>\n<body>\n<p> Log out</p>\n</body>\n</html>");
@@ -181,7 +181,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button3ActionPerformed
         // TODO add your handling code here:
-        ChannelFrame ch1 = new ChannelFrame();
+        ChannelFrame2 ch1 = new ChannelFrame2();
         ch1.setVisible(true);
     }//GEN-LAST:event_Button3ActionPerformed
 
