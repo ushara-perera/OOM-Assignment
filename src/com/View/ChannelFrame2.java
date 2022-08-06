@@ -33,12 +33,13 @@ public class ChannelFrame2 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TextFieldUser = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        TextFieldChannel = new javax.swing.JTextField();
+        PasswordField = new javax.swing.JPasswordField();
+        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("MEMO");
@@ -68,14 +69,14 @@ public class ChannelFrame2 extends javax.swing.JFrame {
         jLabel4.setText("Create your OWN Channel");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 320, 70));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setToolTipText("Enter your user name");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldUser.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TextFieldUser.setToolTipText("Enter your user name");
+        TextFieldUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                TextFieldUserActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 210, 40));
+        jPanel1.add(TextFieldUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 210, 40));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back12.jpg"))); // NOI18N
@@ -85,30 +86,42 @@ public class ChannelFrame2 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 360, 80, 70));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 80, 70));
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("CREATE");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        jButton3.setText("Clear the Form");
+        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 150, 60));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 190, 40));
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel5.setText("Channel Name");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 160, 30));
 
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField3.setText("Enter a preferred channel name");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 210, 40));
+        TextFieldChannel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TextFieldChannel.setText("Enter a preferred channel name");
+        jPanel1.add(TextFieldChannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 210, 40));
 
-        jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 210, 30));
+        PasswordField.setText("jPasswordField1");
+        jPanel1.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 210, 30));
+
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("CREATE");
+        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 150, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/channel1.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -133,9 +146,9 @@ public class ChannelFrame2 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TextFieldUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_TextFieldUserActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // eturn to the home page
@@ -144,11 +157,32 @@ public class ChannelFrame2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // Notification window to show channel is successfully created
+    
+    // Notification window to show channel is successfully created
         JOptionPane.showMessageDialog(this, "Channel created");
         ChannelFrame ch2 = new ChannelFrame();
         ch2.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        //Store user inputs
+    String UserName = TextFieldUser.getText().toString();
+    String Password = PasswordField.getPassword().toString();
+    String ChannelName = TextFieldChannel.getText().toString();
+    
+    if(UserName.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid User Name");
+    } else if(Password.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid Password");
+    } else if (ChannelName.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid Channel Name");
+    } else {
+        JOptionPane.showMessageDialog(this, "Channel created");
+        ChannelFrame ch2 = new ChannelFrame();
+        ch2.setVisible(true);
+    }
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,17 +223,18 @@ public class ChannelFrame2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JTextField TextFieldChannel;
+    private javax.swing.JTextField TextFieldUser;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
