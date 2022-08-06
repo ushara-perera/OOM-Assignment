@@ -4,6 +4,8 @@
  */
 package com.View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -31,10 +33,11 @@ public class LoginFrame1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TextFieldUser = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        PasswordField = new javax.swing.JPasswordField();
+        buttonClear = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("MEMO");
@@ -64,15 +67,14 @@ public class LoginFrame1 extends javax.swing.JFrame {
         jLabel4.setText("Carats Login page");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 226, 60));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setText("Enter your preferred user name");
-        jTextField1.setToolTipText("Enter your preferred user name");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldUser.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TextFieldUser.setToolTipText("Enter your preferred user name");
+        TextFieldUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                TextFieldUserActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 210, 40));
+        jPanel1.add(TextFieldUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 210, 40));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back12.jpg"))); // NOI18N
@@ -88,16 +90,28 @@ public class LoginFrame1 extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("LOGIN");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 100, 60));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 100, 60));
 
-        jPasswordField1.setToolTipText("Enter your password here. The password cannot exceed 8 characters");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
+        PasswordField.setToolTipText("Enter your password here. The password cannot exceed 8 characters");
+        jPanel1.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
+
+        buttonClear.setBackground(new java.awt.Color(0, 0, 0));
+        buttonClear.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        buttonClear.setForeground(new java.awt.Color(255, 255, 255));
+        buttonClear.setText("Clear the Form");
+        buttonClear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        buttonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonClearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 190, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/My project.jpg"))); // NOI18N
         jLabel1.setText("hello");
@@ -125,9 +139,9 @@ public class LoginFrame1 extends javax.swing.JFrame {
         b1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TextFieldUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_TextFieldUserActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -136,8 +150,28 @@ public class LoginFrame1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        //Store user inputs
+    String UserName = TextFieldUser.getText().toString();
+    String Password = PasswordField.getPassword().toString();
+        
+    if(UserName.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid User Name");
+    } else if(Password.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid Password");
+    } else {
+        JOptionPane.showMessageDialog(this, "Logged in successfully");
+        HomeFrame lg2 = new HomeFrame();
+        lg2.setVisible(true);
+        dispose();
+    }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void buttonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonClearActionPerformed
+
+        // Clear the user inputs
+        TextFieldUser.setText(null);
+        PasswordField.setText(null);
+    }//GEN-LAST:event_buttonClearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,6 +210,9 @@ public class LoginFrame1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JTextField TextFieldUser;
+    private javax.swing.JButton buttonClear;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -184,7 +221,5 @@ public class LoginFrame1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

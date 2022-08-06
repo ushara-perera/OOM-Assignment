@@ -4,6 +4,8 @@
  */
 package com.View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -31,12 +33,13 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TextFieldUser = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        TextFieldEmail = new javax.swing.JTextField();
+        PasswordField = new javax.swing.JPasswordField();
+        buttonClear = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("MEMO");
@@ -66,15 +69,15 @@ public class UserFrame extends javax.swing.JFrame {
         jLabel4.setText("Carats Signup page");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 226, 60));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setText("Enter your preferred user name");
-        jTextField1.setToolTipText("");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldUser.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TextFieldUser.setText("Enter your preferred user name");
+        TextFieldUser.setToolTipText("");
+        TextFieldUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                TextFieldUserActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 210, 40));
+        jPanel1.add(TextFieldUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 210, 40));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back12.jpg"))); // NOI18N
@@ -91,27 +94,44 @@ public class UserFrame extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("SUBSCRIBE");
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 220, 60));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 170, 60));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Personal email address");
+        jLabel5.setText("Email address");
         jLabel5.setOpaque(true);
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 30));
 
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField3.setToolTipText("Please enter a valid email address.");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        TextFieldEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        TextFieldEmail.setToolTipText("Please enter a valid email address.");
+        TextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                TextFieldEmailActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 210, 40));
+        jPanel1.add(TextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 210, 40));
 
-        jPasswordField1.setText("enter your password here");
-        jPasswordField1.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters and cannot exceed 8 characters.");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
+        PasswordField.setText("enter your password here");
+        PasswordField.setToolTipText("Enter your password here. The password can only contain alpha-numeric characters and cannot exceed 8 characters.");
+        jPanel1.add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 210, 30));
+
+        buttonClear.setBackground(new java.awt.Color(0, 0, 0));
+        buttonClear.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        buttonClear.setForeground(new java.awt.Color(255, 255, 255));
+        buttonClear.setText("Clear the Form");
+        buttonClear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        buttonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonClearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 190, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/My project.jpg"))); // NOI18N
         jLabel1.setText("hello");
@@ -138,9 +158,9 @@ public class UserFrame extends javax.swing.JFrame {
         b1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TextFieldUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldUserActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_TextFieldUserActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -148,9 +168,37 @@ public class UserFrame extends javax.swing.JFrame {
         b1.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void TextFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_TextFieldEmailActionPerformed
+
+    private void buttonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonClearActionPerformed
+
+        // Clear the user inputs
+        TextFieldUser.setText(null);
+        PasswordField.setText(null);
+        TextFieldEmail.setText(null);
+    }//GEN-LAST:event_buttonClearActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+           //Store user inputs
+    String UserName = TextFieldUser.getText().toString();
+    String Password = PasswordField.getPassword().toString();
+    String emailAddress = TextFieldEmail.getText().toString();
+        
+    if(UserName.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid User Name");
+    } else if(Password.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid Password");
+    } else if(emailAddress.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter a valid Email Address");
+    }else {
+        JOptionPane.showMessageDialog(this, "Subscribed successfully");
+        HomeFrame lg2 = new HomeFrame();
+        lg2.setVisible(true);
+        dispose();
+    }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +236,10 @@ public class UserFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JTextField TextFieldEmail;
+    private javax.swing.JTextField TextFieldUser;
+    private javax.swing.JButton buttonClear;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -197,8 +249,5 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
