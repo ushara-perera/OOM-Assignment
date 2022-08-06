@@ -31,7 +31,6 @@ public class ChannelControllerTest {
     @Before
     public void setUp() {
         controller = new ChannelController();
-        
     }
     
     @After
