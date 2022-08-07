@@ -54,4 +54,18 @@ public class ChannelControllerTest {
         assertEquals(8, passwordLength);
     }
     
+     @Test
+    public void testPasswordValidity(){
+        
+        int passwordValid = controller.passwordValid(7, 8);
+        assertEquals(8, passwordValid);
+    }
+    
+    @Test
+    public void testUserNameValidity(){
+        
+        int UserNameValid = controller.UserNameValid(7, 8);
+        assertEquals(8, UserNameValid);
+    }
+    
 }
