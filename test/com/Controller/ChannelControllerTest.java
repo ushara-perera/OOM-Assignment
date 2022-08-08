@@ -68,4 +68,11 @@ public class ChannelControllerTest {
         assertEquals(8, UserNameValid);
     }
     
+    @Test
+    public void testUserNameEntered(){
+        
+        int UserName = controller.UserName(7, 8);
+        assertEquals(8, UserName);
+    }
+    
 }
