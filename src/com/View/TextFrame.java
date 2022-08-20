@@ -12,17 +12,17 @@ import com.Controller.ChannelController;
  *
  * @author User
  */
-public class ChannelFrame extends javax.swing.JFrame {
+public class TextFrame extends javax.swing.JFrame {
 
     private ChannelController controller;
     /**
      * Creates new form UserFrame
      */
-    public ChannelFrame() {
+    public TextFrame() {
         initComponents();
     }
     
-    public ChannelFrame(ChannelController controller){
+    public TextFrame(ChannelController controller){
         this();
         this.controller=controller;
     }
@@ -39,11 +39,9 @@ public class ChannelFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jButtonUnsub = new javax.swing.JButton();
         jButtonSub = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
 
         jButton1.setText("MEMO");
@@ -59,11 +57,19 @@ public class ChannelFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("My Channel");
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(590, 450));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(550, 320));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField1.setOpaque(true);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 380, 180));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back12.jpg"))); // NOI18N
@@ -73,49 +79,32 @@ public class ChannelFrame extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 80, 70));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 80, 70));
 
-        jButtonUnsub.setBackground(new java.awt.Color(255, 102, 102));
-        jButtonUnsub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonUnsub.setText("UNSUBSCRIBE");
-        jButtonUnsub.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jButtonUnsub.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonUnsubActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonUnsub, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 120, 40));
-
-        jButtonSub.setBackground(new java.awt.Color(204, 255, 204));
-        jButtonSub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonSub.setText("SUBSCRIBE");
+        jButtonSub.setBackground(new java.awt.Color(255, 204, 204));
+        jButtonSub.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonSub.setText("POST");
         jButtonSub.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButtonSub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSub, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 120, 40));
-
-        jTextArea.setColumns(20);
-        jTextArea.setRows(5);
-        jScrollPane1.setViewportView(jTextArea);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 400, 290));
+        jPanel1.add(jButtonSub, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 80, 50));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/h1.jpg"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 410));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/img2.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
 
         pack();
@@ -131,23 +120,17 @@ public class ChannelFrame extends javax.swing.JFrame {
         b1.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButtonUnsubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUnsubActionPerformed
-        // event handler to unsubscribe from a channel:
-        int response = JOptionPane.showConfirmDialog(this, "Do you wish to Unsubscribe ?", "Unsubscribe",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if(response==JOptionPane.YES_OPTION){
-            try {
-            
-            JOptionPane.showMessageDialog(null, "User Unsubcribed!","Success",JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
-        } 
-            dispose();
-        }
-    }//GEN-LAST:event_jButtonUnsubActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
-       TextFrame t1 = new TextFrame();
-       t1.setVisible(true);
+        if(!jTextField1.getText().isEmpty()){
+           this.controller.postMessage(jTextField1.getText());
+       }else{
+           JOptionPane.showMessageDialog(rootPane, "Post can not be empty");
+       }
+        
     }//GEN-LAST:event_jButtonSubActionPerformed
 
     /**
@@ -159,7 +142,7 @@ public class ChannelFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ChannelFrame().setVisible(true);
+                new TextFrame().setVisible(true);
             }
         });
     }
@@ -168,16 +151,11 @@ public class ChannelFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonSub;
-    private javax.swing.JButton jButtonUnsub;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
-@Override
-    public void update(String s) {
-        jTextArea.append(s+"\n");
-    }
 }
+

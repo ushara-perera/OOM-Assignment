@@ -4,7 +4,11 @@
  */
 package com.View;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
+import com.Controller.ChannelController;
+import com.Controller.Updater;
 
 /**
  *
@@ -12,6 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class UserFrame extends javax.swing.JFrame {
 
+    private ChannelController controller;
     /**
      * Creates new form UserFrame
      */
@@ -19,6 +24,10 @@ public class UserFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+    public UserFrame(ChannelController controller){
+        this();
+        this.controller=controller;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -188,18 +197,18 @@ public class UserFrame extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
            //Store user inputs
     String UserName = TextFieldUser.getText().toString();
-    String Password = PasswordField.getPassword().toString();
-    String emailAddress = TextFieldChannel.getText().toString();
+    String emailAddress = TextFieldEmail.getText().toString();
+    String channel = TextFieldChannel.getText().toString();
         
     if(UserName.equals("")){
         JOptionPane.showMessageDialog(null, "Please enter a valid User Name");
-    } else if(Password.equals("")){
-        JOptionPane.showMessageDialog(null, "Please enter a valid Password");
     } else if(emailAddress.equals("")){
-        JOptionPane.showMessageDialog(null, "Please enter a valid Email Address");
+        JOptionPane.showMessageDialog(null, "Please enter a valid Email address");
+    } else if(channel.equals("")){
+        JOptionPane.showMessageDialog(null, "Please enter an existing Channel name");
     }else {
         JOptionPane.showMessageDialog(this, "Subscribed successfully");
-        HomeFrame lg2 = new HomeFrame();
+        ChannelFrame lg2 = new ChannelFrame();
         lg2.setVisible(true);
         dispose();
     }
@@ -235,7 +244,9 @@ public class UserFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(UserFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        String emailAddress = "noo@gmail.com";
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -244,6 +255,13 @@ public class UserFrame extends javax.swing.JFrame {
         });
     }
 
+    public static boolean valEmail(String input){
+
+    String emailAddressRegex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
+    Pattern emailAddressPat = Pattern.compile(emailAddressRegex,Pattern.CASE_INSENSITIVE);
+    Matcher matcher = emailAddressPat.matcher(input);
+    return matcher.find();
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TextFieldChannel;
     private javax.swing.JTextField TextFieldEmail;
@@ -260,3 +278,5 @@ public class UserFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
+
+
