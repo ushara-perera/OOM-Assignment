@@ -4,6 +4,7 @@
  */
 package com.View;
 
+import com.Controller.ChannelController;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,13 +13,19 @@ import javax.swing.JOptionPane;
  */
 public class ChannelFrame2 extends javax.swing.JFrame {
 
+    private ChannelController cc;
     /**
      * Creates new form UserFrame
      */
     public ChannelFrame2() {
         initComponents();
     }
-
+    
+    public ChannelFrame2(ChannelController cc){
+        this();
+        this.cc = cc;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -178,7 +185,7 @@ public class ChannelFrame2 extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Please enter a valid Channel Name");
     } else {
         JOptionPane.showMessageDialog(this, "Channel created");
-        ChannelFrame ch2 = new ChannelFrame();
+        TextFrame ch2 = new TextFrame(cc);
         ch2.setVisible(true);
     }
         

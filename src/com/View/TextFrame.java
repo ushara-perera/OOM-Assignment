@@ -41,7 +41,7 @@ public class TextFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jButtonSub = new javax.swing.JButton();
+        jButtonPost = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         jButton1.setText("MEMO");
@@ -81,16 +81,16 @@ public class TextFrame extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 80, 70));
 
-        jButtonSub.setBackground(new java.awt.Color(255, 204, 204));
-        jButtonSub.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonSub.setText("POST");
-        jButtonSub.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jButtonSub.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPost.setBackground(new java.awt.Color(255, 204, 204));
+        jButtonPost.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonPost.setText("POST");
+        jButtonPost.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButtonPost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSubActionPerformed(evt);
+                jButtonPostActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSub, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 80, 50));
+        jPanel1.add(jButtonPost, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 80, 50));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/img2.png"))); // NOI18N
@@ -124,14 +124,14 @@ public class TextFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
+    private void jButtonPostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPostActionPerformed
         if(!jTextField1.getText().isEmpty()){
            this.controller.postMessage(jTextField1.getText());
        }else{
            JOptionPane.showMessageDialog(rootPane, "Post can not be empty");
        }
         
-    }//GEN-LAST:event_jButtonSubActionPerformed
+    }//GEN-LAST:event_jButtonPostActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,7 +150,7 @@ public class TextFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButtonSub;
+    private javax.swing.JButton jButtonPost;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

@@ -6,9 +6,6 @@ package com.Model;
 
 import com.Controller.ChannelController;
 import com.View.ChannelFrame;
-import com.View.ChannelFrame2;
-import com.View.LoginFrame1;
-import com.View.MyMemo;
 import com.View.UserFrame;
 
 /**

@@ -4,18 +4,16 @@
  */
 package com.View;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import java.awt.*;
+import com.Controller.ChannelController;
 import javax.swing.JOptionPane;
 
 public class HomeFrame extends javax.swing.JFrame {
 
-    
+    private ChannelController cc;
     
     public HomeFrame() {
         initComponents();
-        
+        this.cc = new ChannelController();
     }
 
     @SuppressWarnings("unchecked")
@@ -182,7 +180,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button1ActionPerformed
 
-        UserFrame hb1 = new UserFrame();
+        UserFrame hb1 = new UserFrame(cc);
         hb1.setVisible(true);
     }//GEN-LAST:event_Button1ActionPerformed
 
@@ -207,7 +205,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
     private void Button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button5ActionPerformed
         // TODO add your handling code here:
-        ChannelFrame2 ch1 = new ChannelFrame2();
+        ChannelFrame2 ch1 = new ChannelFrame2(cc);
         ch1.setVisible(true);
     }//GEN-LAST:event_Button5ActionPerformed
 /**/

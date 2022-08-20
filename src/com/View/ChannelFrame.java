@@ -6,13 +6,12 @@ package com.View;
 
 import com.Controller.Updater;
 import javax.swing.JOptionPane;
-import java.util.logging.*;
 import com.Controller.ChannelController;
 /**
  *
  * @author User
  */
-public class ChannelFrame extends javax.swing.JFrame {
+public class ChannelFrame extends javax.swing.JFrame implements Updater{
 
     private ChannelController controller;
     /**
@@ -136,7 +135,7 @@ public class ChannelFrame extends javax.swing.JFrame {
         int response = JOptionPane.showConfirmDialog(this, "Do you wish to Unsubscribe ?", "Unsubscribe",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if(response==JOptionPane.YES_OPTION){
             try {
-            
+            this.controller.unSubscribe(this);
             JOptionPane.showMessageDialog(null, "User Unsubcribed!","Success",JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
@@ -146,8 +145,12 @@ public class ChannelFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonUnsubActionPerformed
 
     private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
-       TextFrame t1 = new TextFrame();
-       t1.setVisible(true);
+       try {
+            this.controller.subscribe(this);
+            JOptionPane.showMessageDialog(null, "User Subcribed!","Success",JOptionPane.INFORMATION_MESSAGE);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage(),"Error",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButtonSubActionPerformed
 
     /**

@@ -208,7 +208,7 @@ public class UserFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Please enter an existing Channel name");
     }else {
         JOptionPane.showMessageDialog(this, "Subscribed successfully");
-        ChannelFrame lg2 = new ChannelFrame();
+        ChannelFrame lg2 = new ChannelFrame(controller);
         lg2.setVisible(true);
         dispose();
     }
