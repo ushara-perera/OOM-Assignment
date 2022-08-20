@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.View;
+
+//import.com.Controller.ChannelController;
 import java.awt.*;
 import javax.swing.*;
 
@@ -33,6 +35,9 @@ public class MyMemo extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButtonPost = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -51,7 +56,7 @@ public class MyMemo extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        BackgroundPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 600, 40));
+        BackgroundPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 510, 40));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -59,11 +64,11 @@ public class MyMemo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         BackgroundPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 20));
@@ -97,6 +102,27 @@ public class MyMemo extends javax.swing.JFrame {
 
         BackgroundPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 100, 60));
 
+        jButtonPost.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonPost.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonPost.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonPost.setText("POST");
+        jButtonPost.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButtonPost.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPostActionPerformed(evt);
+            }
+        });
+        BackgroundPanel.add(jButtonPost, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 80, 40));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setOpaque(false);
+        jTextArea1.setSelectedTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setSelectionColor(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        BackgroundPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 380, 250));
+
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/h2.jpg"))); // NOI18N
         BackgroundPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
@@ -105,7 +131,7 @@ public class MyMemo extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(BackgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(BackgroundPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,6 +144,14 @@ public class MyMemo extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButtonPostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPostActionPerformed
+       /*if(!txtPost.getText().isEmpty()){
+           this.controller.postMessage(txtPost.getText());
+       }else{
+           JOptionPane.showMessageDialog(rootPane, "Post can not be empty");
+       }*/
+    }//GEN-LAST:event_jButtonPostActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,10 +190,13 @@ public class MyMemo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BackgroundPanel;
+    private javax.swing.JButton jButtonPost;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

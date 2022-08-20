@@ -4,19 +4,27 @@
  */
 package com.View;
 
+import com.Controller.Updater;
 import javax.swing.JOptionPane;
-
+import java.util.logging.*;
+import com.Controller.ChannelController;
 /**
  *
  * @author User
  */
 public class ChannelFrame extends javax.swing.JFrame {
 
+    private ChannelController controller;
     /**
      * Creates new form UserFrame
      */
     public ChannelFrame() {
         initComponents();
+    }
+    
+    public ChannelFrame(ChannelController controller){
+        this();
+        this.controller=controller;
     }
 
     /**
@@ -33,7 +41,9 @@ public class ChannelFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonPost = new javax.swing.JButton();
+        jButtonUnsub = new javax.swing.JButton();
+        jButtonSub = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         jButton1.setText("MEMO");
@@ -62,7 +72,7 @@ public class ChannelFrame extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 570, 40));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 430, 240));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back12.jpg"))); // NOI18N
@@ -74,16 +84,39 @@ public class ChannelFrame extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 80, 70));
 
-        jButton3.setBackground(new java.awt.Color(204, 255, 204));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("UNSUBSCRIBE");
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPost.setBackground(new java.awt.Color(102, 153, 255));
+        jButtonPost.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonPost.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonPost.setText("POST");
+        jButtonPost.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButtonPost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonPostActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 140, 30));
+        jPanel1.add(jButtonPost, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 100, 60));
+
+        jButtonUnsub.setBackground(new java.awt.Color(255, 102, 102));
+        jButtonUnsub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonUnsub.setText("UNSUBSCRIBE");
+        jButtonUnsub.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButtonUnsub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUnsubActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonUnsub, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 140, 30));
+
+        jButtonSub.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonSub.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonSub.setText("SUBSCRIBE");
+        jButtonSub.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButtonSub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSubActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonSub, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 140, 30));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/h1.jpg"))); // NOI18N
@@ -117,13 +150,21 @@ public class ChannelFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonUnsubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUnsubActionPerformed
         // event handler to unsubscribe from a channel:
         int response = JOptionPane.showConfirmDialog(this, "Do you wish to Unsubscribe ?", "Unsubscribe",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if(response==JOptionPane.YES_OPTION){
             dispose();
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonUnsubActionPerformed
+
+    private void jButtonPostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPostActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonPostActionPerformed
+
+    private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSubActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,7 +183,9 @@ public class ChannelFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonPost;
+    private javax.swing.JButton jButtonSub;
+    private javax.swing.JButton jButtonUnsub;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

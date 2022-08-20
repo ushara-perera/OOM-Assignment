@@ -4,17 +4,46 @@
  */
 package com.Controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author User
  */
 public class ChannelController {
 
-    public int subscribe(int x,int y) {
-       if (x == 0 || y == 0){
-       throw new RuntimeException("Error");
+        private static final List<Updater> list = new ArrayList<>();
+    
+    public void subscribe(Updater u) throws Exception{
+        if(u != null){
+            if(!list.contains(u)){
+                list.add(u);    
+            }else{
+                throw new Exception("User Already Subscribed");   
+            }
+            
+        }else{
+            throw new Exception("Subscriber Invalid.");
+        }
+    }
+    
+    public void unSubscribe(Updater u) throws Exception{
+        if(u != null){
+            if(list.contains(u)){
+                list.remove(u);
+            }else{
+                throw new Exception("User Not Subscribe");    
+            }
+        }else{
+            throw new Exception("User can not be null");
+        }
+    }
+    
+    public void postMessage(String s){
+       for(Updater u:list){
+           u.update(s);
        }
-        return x + y;
     }
 
     int passwordLength() {
